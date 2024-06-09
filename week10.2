@@ -1,0 +1,12 @@
+n = int(input().strip())
+arr = list(map(int, input().strip().split()))
+numswaps = 0
+for i in range(n):
+    for j in range(0, n - i - 1):
+        if arr[j] > arr[j + 1]:
+            
+            arr[j], arr[j + 1] = arr[j + 1], arr[j]
+            numswaps += 1
+print(f"List is sorted in {numswaps} swaps.")
+print(f"First Element: {arr[0]}")
+print(f"Last Element: {arr[-1]}")
