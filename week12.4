@@ -1,0 +1,20 @@
+b = {}
+
+try:
+    while True:
+        e = input()
+        if not e:
+            break
+        t,g=e.split(",")
+        g= g.strip()
+
+        if g in b:
+            b[g].append(t)
+
+        else:
+
+            b[g] = [t]
+
+except EOFError:
+    for g, books in b.items():
+        print(f"{g}: {', '.join(books)}")
