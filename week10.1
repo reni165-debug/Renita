@@ -1,0 +1,16 @@
+n = int(input())
+array = input().split()
+for i in range(n):
+    array[i] = int(array[i])
+for i in range(n):
+    swapped = False
+    for j in range(0,n-i-1):
+        if array[j] > array[j + 1]:
+            array[j] ,array[j + 1]=array[j + 1],array[j]
+            swapped = True
+    if not swapped:
+        break
+    
+for i in range(n):
+    print(array[i], end=' ')
+print()
