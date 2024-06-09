@@ -1,0 +1,8 @@
+def christmasDiscount(n):
+    prime_digits = {'2', '3', '5', '7'}
+    num=str(n)
+    total_discount = 0
+    for i in num:
+        if i in prime_digits:
+            total_discount += int(i)
+    return(total_discount)
