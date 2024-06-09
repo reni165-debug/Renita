@@ -1,0 +1,22 @@
+a=int(input())
+
+b=input()
+
+c=b.split()
+
+d=0
+
+e=[]
+
+for i in c:
+    e.append(int(i))
+
+n=int(input())
+
+for i in range(len(e)): 
+    for j in range(len(e)):
+        if i<j:
+            if (abs(e[i]-e[j])==n):
+                d+=1
+
+print(d)
