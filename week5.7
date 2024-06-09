@@ -1,0 +1,15 @@
+s=input()
+l=[]
+for i in s:
+    if(i.isalpha()):
+        l.append(i)
+l.reverse()
+result=''
+index=0
+for i in s:
+    if(i.isalpha()):
+        result+=l[index]
+        index+=1
+    else:
+        result+=i
+print(result)        
