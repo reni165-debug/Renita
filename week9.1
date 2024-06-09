@@ -1,0 +1,14 @@
+def checkUgly(n):
+    if n <= 0:
+        return "not ugly"
+
+    for p in [2, 3, 5]:
+        while n % p == 0:
+            n //= p
+    if n == 1:
+        return "ugly"
+    else:
+        return "not ugly"
+
+n=input()
+    
