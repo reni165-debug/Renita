@@ -1,0 +1,4 @@
+x=int(input())
+y=int(input())
+a=((x*75)+(y*112))
+print("The total weight of all these widgets and gizmos is",a,"grams.")
