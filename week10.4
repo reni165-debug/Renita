@@ -1,0 +1,16 @@
+def frequency_sorted(numbers):
+    freq_dict = {}
+    for num in numbers:
+        if num in freq_dict:
+            freq_dict[num] += 1
+        else:
+            freq_dict[num] = 1
+    sorted_freq = sorted(freq_dict.items(), key=lambda x: x[1], reverse=True)
+    return sorted_freq
+
+numbers_list = input().split()
+numbers_list = [int(num) for num in numbers_list]  
+s = frequency_sorted(numbers_list)
+s.sort()
+for number, frequency in s:
+    print(number,frequency)
