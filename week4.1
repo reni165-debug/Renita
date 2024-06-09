@@ -1,2 +1,10 @@
 num=int(input())
-num
+num_str=str(num)
+non_rep=[]
+for dig in num_str:
+    if num_str.count(dig)==1:
+
+       non_rep.append(int(dig))
+non_rep_ct=len(non_rep)
+print(non_rep_ct)
+       
