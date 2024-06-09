@@ -1,0 +1,19 @@
+arr_input = input().strip()
+target_input = input().strip()
+arr = [int(x) for x in arr_input.split(',')]
+target = int(target_input)
+arr.sort()
+low = 0
+high = len(arr) - 1
+found = False
+while low <= high:
+    mid = (low + high) // 2
+    
+    if arr[mid] == target:
+        found = True
+        break
+    elif arr[mid] < target:
+        low = mid + 1
+    else:
+        high = mid - 1
+print(found)
